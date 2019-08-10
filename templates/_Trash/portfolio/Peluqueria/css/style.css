@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-size: 1.05em !important;
+   }
+
+body {
+    font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    }
+nav {
+    margin: 0 auto;
+    background-color: #4de6a7;
+    }
+.collapse ul li a:hover {
+    background: #2a9c6d;
+    font-weight: 700;
+    color: white;
+    }
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #8080802e;
+    }
+.logo {
+    margin: 0 auto;
+    max-width: 1000px;
+    height: auto;
+    }
+.logo img {
+    width: 100%;
+    height: auto;
+    }
+h5 {
+    text-align: left;
+    padding: 2px;
+    }
+h5:hover {
+    font-weight: 700;
+    }
+.servicios {
+    height: 50px;
+    padding-left: 10px;
+    }
+#icon  {
+    position: relative;
+    margin-left: 120px;
+    top: -44px;
+    }
+.fab {color: #044a2d; font-size: 30px;}
+.fab:hover {color: #fff;}
+
+.datos {
+    background: #1ed68af2;
+    margin: 0 2px 0 2px;
+    }
+h6 {
+
+    font-weight: 900;
+    }
+p {
+    border-bottom: 1px solid black;
+    }
+.row {
+    padding: 25px;
+    margin: 5px 6px 5px 6px;
+}
+.horarios {
+    background: white;
+    }
+.accordion {
+    padding: 15px;
+    }
+footer {
+    padding-top: 15px;
+    background-color: #1ed68ab5;
+    }
+
+/*-------------- MEDIA----------*/
+@media (max-width: 990px) {
+.social {
+    max-width: 200px;
+}
+}
+@media (max-width: 782px) {
+.horarios {
+    min-width: 250px;
+}
+}
