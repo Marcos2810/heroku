@@ -1,0 +1,3 @@
+Colores:
+
+Principal: #28d78f
