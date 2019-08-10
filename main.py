@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, make_response
 
 app = Flask(__name__)
 
@@ -13,17 +13,24 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/contact", methods=["POST"])
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
-    contact_name = request.form.get("contact-name")
-    contact_email = request.form.get("contact-email")
-    contact_message = request.form.get("contact-message")
+    if request.method == "GET":
+        user_name = request.cookies.get("user_name")
+        return render_template("contact.html", user=user_name)
+    elif request.method == "POST":
+        contact_name = request.form.get("contact-name")
+        contact_email = request.form.get("contact-email")
+        contact_message = request.form.get("contact-message")
 
-    print(contact_name)
-    print(contact_email)
-    print(contact_message)
+        print(contact_name)
+        print(contact_email)
+        print(contact_message)
 
-    return render_template("success.html")
+        response = make_response(render_template("success.html"))
+        response.set_cookie("user_name", contact_name)
+
+        return response
 
 
 if __name__ == '__main__':
